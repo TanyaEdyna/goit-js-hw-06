@@ -2,11 +2,11 @@ const decrementEl = document.querySelector('[data-action="decrement"]');
 const incrementEl = document.querySelector('[data-action="increment"]');
 const counterEl = document.querySelector('#value');//лічильник
 console.log(counterEl);
-let counterValue = 0;
+let counterValue = 0;//створена змінна - зберігає поточне значення лічильника
 
 decrementEl.addEventListener('click', () => {
     counterValue -=1;
-counterEl.textContent = counterValue;
+counterEl.textContent = counterValue;//counterEl.textContent - встановлює нове значення лічильника на сторінці
 
 });
 console.log(decrementEl);
