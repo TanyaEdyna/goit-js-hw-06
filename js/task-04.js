@@ -1,23 +1,21 @@
-const counterEl = document.querySelector('#counter');
-
 const decrementEl = document.querySelector('[data-action="decrement"]');
 const incrementEl = document.querySelector('[data-action="increment"]');
+const counterEl = document.querySelector('#value');//лічильник
+console.log(counterEl);
+let counterValue = 0;
+
+decrementEl.addEventListener('click', () => {
+    counterValue -=1;
+counterEl.textContent = counterValue;
+
+});
 console.log(decrementEl);
+
+incrementEl.addEventListener('click', ()=>{
+    counterValue +=1;
+    counterEl.textContent = counterValue;
+})
 console.log(incrementEl);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
