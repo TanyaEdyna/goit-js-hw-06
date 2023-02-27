@@ -1,6 +1,5 @@
 const correctInputEl = document.querySelector('#validation-input');
 const inputLength = Number(correctInputEl.dataset.length); //6
-console.log(typeof inputLength);
 
 function changeColorOfBorder() {
   if (correctInputEl.value.length === inputLength) {
