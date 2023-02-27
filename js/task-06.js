@@ -1,34 +1,18 @@
 const correctInputEl = document.querySelector('#validation-input');
-     const inputLength = correctInputEl.dataset.length; //6
-   
-    function changeColorOfBorder() {
-    if (correctInputEl.value.length !== inputLength) {
-        correctInputEl.classList.add('invalid') //valid = green
+const inputLength = Number(correctInputEl.dataset.length); //6
+console.log(typeof inputLength);
 
-    } else {
-        correctInputEl.classList.remove('valid')
-        correctInputEl.classList.add('invalid')//invalid = red
-    }; 
+function changeColorOfBorder() {
+  if (correctInputEl.value.length === inputLength) {
+    correctInputEl.classList.add('valid'); //valid = green
+    correctInputEl.classList.remove('invalid');
+  } else {
+    correctInputEl.classList.add('invalid'); //invalid = red
+    correctInputEl.classList.remove('valid');
+  }
 }
 
 correctInputEl.addEventListener('blur', changeColorOfBorder);
-// classList -  для роботи з класами елемента
-
-// const inputEl = document.querySelector('#validation-input');
-// const data = Number(inputEl.dataset.length);
-
-// function ghangeBorderColor() {
-//   if (inputEl.value.length !== data) {
-//     inputEl.classList.add('invalid');
-//   }
-//   if (inputEl.value.length === data) {
-//     inputEl.classList.remove('invalid');
-//     inputEl.classList.add('valid');
-//   }
-// }
-// inputEl.addEventListener('blur', ghangeBorderColor);
-
-
 
 
 
