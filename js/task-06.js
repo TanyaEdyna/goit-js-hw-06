@@ -1,24 +1,32 @@
 const correctInputEl = document.querySelector('#validation-input');
- 
-correctInputEl.addEventListener('blur', () => {
-
-    const inputLength = correctInputEl.dataset.length; //6
+     const inputLength = correctInputEl.dataset.length; //6
    
+    function changeColorOfBorder() {
+    if (correctInputEl.value.length !== inputLength) {
+        correctInputEl.classList.add('invalid') //valid = green
 
-    if (inputLength >= 6) {
-       correctInputEl.classList.add('valid') //valid = green
     } else {
-       correctInputEl.classList.add('invalid')//invalid = red
+        correctInputEl.classList.remove('valid')
+        correctInputEl.classList.add('invalid')//invalid = red
     }; 
-  
-});
+}
 
+correctInputEl.addEventListener('blur', changeColorOfBorder);
+// classList -  для роботи з класами елемента
 
+// const inputEl = document.querySelector('#validation-input');
+// const data = Number(inputEl.dataset.length);
 
-
-//classList -  для роботи з класами елемента
-
-
+// function ghangeBorderColor() {
+//   if (inputEl.value.length !== data) {
+//     inputEl.classList.add('invalid');
+//   }
+//   if (inputEl.value.length === data) {
+//     inputEl.classList.remove('invalid');
+//     inputEl.classList.add('valid');
+//   }
+// }
+// inputEl.addEventListener('blur', ghangeBorderColor);
 
 
 
